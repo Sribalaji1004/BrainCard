@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BrainCard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="forms.css">
+
+
+
+    <link rel="stylesheet" 
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+  </head>
+
+  <body>
+    <h1> BrainCard </h1>
+    <table oncontextmenu="return false"><tbody><tr>
+        <td onmouseover="hoverCard(1)" onmouseout="unhoverCard(1)" onclick="clickCard(1, 6)"><img src="./game/mastermind/image/0.jpg" alt="" id="card1" ></td>
+        <td onmouseover="hoverCard(2)" onmouseout="unhoverCard(2)" onclick="clickCard(2, 132)"><img src="./game/mastermind/image/0.jpg" alt="" id="card2"></td>
+        <td onmouseover="hoverCard(3)" onmouseout="unhoverCard(3)" onclick="clickCard(3, 730)"><img src="./game/mastermind/image/0.jpg" alt="" id="card3"></td>
+        <td onmouseover="hoverCard(4)" onmouseout="unhoverCard(4)" onclick="clickCard(4, 132)"><img src="./game/mastermind/image/0.jpg" alt="" id="card4"></td>
+        <tr>
+            <td onmouseover="hoverCard(5)" onmouseout="unhoverCard(6)" onclick="clickCard(6, 210)"><img src="./game/mastermind/image/0.jpg" alt="" id="card6"></td>
+            <td onmouseover="hoverCard(6)" onmouseout="unhoverCard(7)" onclick="clickCard(7, 809)"><img src="./game/mastermind/image/0.jpg" alt="" id="card7"></td>
+            <td onmouseover="hoverCard(7)" onmouseout="unhoverCard(8)" onclick="clickCard(8, 8)"><img src="./game/mastermind/image/0.jpg" alt="" id="card8"></td>
+            <td onmouseover="hoverCard(8)" onmouseout="unhoverCard(9)" onclick="clickCard(9, 454)"><img src="./game/mastermind/image/0.jpg" alt="" id="card9"></td>
+            </tr>
+            <tr>
+                <td onmouseover="hoverCard(9)" onmouseout="unhoverCard(11)" onclick="clickCard(11, 377)"><img src="./game/mastermind/image/0.jpg" alt="" id="card11"></td>
+                <td onmouseover="hoverCard(10)" onmouseout="unhoverCard(12)" onclick="clickCard(12, 730)"><img src="./game/mastermind/image/0.jpg" alt="" id="card12"></td>
+                <td onmouseover="hoverCard(11)" onmouseout="unhoverCard(13)" onclick="clickCard(13, 6)"><img src="./game/mastermind/image/0.jpg" alt="" id="card13"></td>
+                <td onmouseover="hoverCard(12)" onmouseout="unhoverCard(14)" onclick="clickCard(14, 8)"><img src="./game/mastermind/image/0.jpg" alt="" id="card14"></td>
+                </tr>
+                <tr>
+                    <td onmouseover="hoverCard(13)" onmouseout="unhoverCard(16)" onclick="clickCard(16, 210)"><img src="./game/mastermind/image/0.jpg" alt="" id="card16"></td>
+                    <td onmouseover="hoverCard(14)" onmouseout="unhoverCard(17)" onclick="clickCard(17, 377)"><img src="./game/mastermind/image/0.jpg" alt="" id="card17"></td>
+                    <td onmouseover="hoverCard(15)" onmouseout="unhoverCard(18)" onclick="clickCard(18, 747)"><img src="./game/mastermind/image/0.jpg" alt="" id="card18"></td>
+                    <td onmouseover="hoverCard(16)" onmouseout="unhoverCard(19)" onclick="clickCard(19, 809)"><img src="./game/mastermind/image/0.jpg" alt="" id="card19"></td>
+
+  </body>
+</html>
