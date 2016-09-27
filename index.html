@@ -1,52 +1,76 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>BrainCard</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="forms.css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
+<head>
+  <title>Mastercards - Games for the Brain</title>
+  <link rel="stylesheet" href="./src/shared.css" type="text/css" media="screen, projection, print" /><script type="text/javascript" src="./src/dynamic.js"></script>
+  <meta name="viewport" id="vp" content="user-scalable=yes,width=device-width" /> <script type="text/javascript" src="./src/default.js"></script>
+  <link rel="stylesheet" href="./src/default.css" type="text/css" media="screen, projection, print" />
+</head>
 
+<body onload="init_cards('Time', 'Moves: ')">
 
-    <link rel="stylesheet" 
-      href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <div class="all">
 
+    <div id="counter">&nbsp;</div>
 
-    <!-- Polyfill(s) for older browsers -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <div class="page">
 
-    <script src="node_modules/zone.js/dist/zone.js"></script>
-    <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+      <h1>Braincards</h1>
 
-    <script src="systemjs.config.js"></script>
-  </head>
+      <div class="content">
+        <table oncontextmenu="return false">
+          <tr>
+            <td onmouseover="hoverCard(1)" onmouseout="unhoverCard(1)" onclick="clickCard(1, 675)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card1" /></td>
+            <td onmouseover="hoverCard(2)" onmouseout="unhoverCard(2)" onclick="clickCard(2, 780)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card2" /></td>
+            <td onmouseover="hoverCard(3)" onmouseout="unhoverCard(3)" onclick="clickCard(3, 862)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card3" /></td>
+            <td onmouseover="hoverCard(4)" onmouseout="unhoverCard(4)" onclick="clickCard(4, 956)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card4" /></td>
+          </tr>
+          <tr>
+            <td onmouseover="hoverCard(5)" onmouseout="unhoverCard(5)" onclick="clickCard(5, 559)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card5" /></td>
+            <td onmouseover="hoverCard(6)" onmouseout="unhoverCard(6)" onclick="clickCard(6, 91)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card6" /></td>
+            <td onmouseover="hoverCard(7)" onmouseout="unhoverCard(7)" onclick="clickCard(7, 490)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card7" /></td>
+            <td onmouseover="hoverCard(8)" onmouseout="unhoverCard(8)" onclick="clickCard(8, 862)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card8" /></td>
+          </tr>
+          <tr>
+            <td onmouseover="hoverCard(9)" onmouseout="unhoverCard(9)" onclick="clickCard(9, 956)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card9" /></td>
+            <td onmouseover="hoverCard(10)" onmouseout="unhoverCard(10)" onclick="clickCard(10, 91)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card10" /></td>
+            <td onmouseover="hoverCard(11)" onmouseout="unhoverCard(11)" onclick="clickCard(11, 559)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card11" /></td>
+            <td onmouseover="hoverCard(12)" onmouseout="unhoverCard(12)" onclick="clickCard(12, 147)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card12" /></td>
+          </tr>
+          <tr>
+            <td onmouseover="hoverCard(13)" onmouseout="unhoverCard(13)" onclick="clickCard(13, 675)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card13" /></td>
+            <td onmouseover="hoverCard(14)" onmouseout="unhoverCard(14)" onclick="clickCard(14, 285)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card14" /></td>
+            <td onmouseover="hoverCard(15)" onmouseout="unhoverCard(15)" onclick="clickCard(15, 147)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card15" /></td>
+            <td onmouseover="hoverCard(16)" onmouseout="unhoverCard(16)" onclick="clickCard(16, 285)">
+              <img src="./game/mastermind/image/0.jpg" alt="" id="card16" /></td>          
+          </tr>
+        </table>
+        <form name="mainForm" action="./" method="post">
+          <div><input type="hidden" name="wins" id="wins" value="0" /><input type="hidden" name="movesValue" id="movesValue" value="0"
+            /><input type="hidden" name="mode" value="didAnswer" /><input type="hidden" name="score" value="0" />
+            <div id="continueDelay">&nbsp;</div> <input type="submit" value="Continue" id="continueButton" class="continue" /></div>
+        </form>
+        <p id="moves">Moves: 0</p>
+        <p class="instructions">Click on cards to uncover pairs.</p>
+        <div style="position: relative; left: 440px; top: -110px; width: 240px"></div>
+      </div>
+      <div class="score">&quot;IQ&quot; Score: 0</div>
+</body>
 
-  <body>
-    <h1> BrainCard </h1>
-    <table oncontextmenu="return false"><tbody><tr>
-        <td onmouseover="hoverCard(1)" onmouseout="unhoverCard(1)" onclick="clickCard(1, 6)"><img src="./game/mastermind/image/0.jpg" alt="" id="card1" ></td>
-        <td onmouseover="hoverCard(2)" onmouseout="unhoverCard(2)" onclick="clickCard(2, 132)"><img src="./game/mastermind/image/0.jpg" alt="" id="card2"></td>
-        <td onmouseover="hoverCard(3)" onmouseout="unhoverCard(3)" onclick="clickCard(3, 730)"><img src="./game/mastermind/image/0.jpg" alt="" id="card3"></td>
-        <td onmouseover="hoverCard(4)" onmouseout="unhoverCard(4)" onclick="clickCard(4, 132)"><img src="./game/mastermind/image/0.jpg" alt="" id="card4"></td>
-        <tr>
-            <td onmouseover="hoverCard(5)" onmouseout="unhoverCard(6)" onclick="clickCard(6, 210)"><img src="./game/mastermind/image/0.jpg" alt="" id="card6"></td>
-            <td onmouseover="hoverCard(6)" onmouseout="unhoverCard(7)" onclick="clickCard(7, 809)"><img src="./game/mastermind/image/0.jpg" alt="" id="card7"></td>
-            <td onmouseover="hoverCard(7)" onmouseout="unhoverCard(8)" onclick="clickCard(8, 8)"><img src="./game/mastermind/image/0.jpg" alt="" id="card8"></td>
-            <td onmouseover="hoverCard(8)" onmouseout="unhoverCard(9)" onclick="clickCard(9, 454)"><img src="./game/mastermind/image/0.jpg" alt="" id="card9"></td>
-            </tr>
-            <tr>
-                <td onmouseover="hoverCard(9)" onmouseout="unhoverCard(11)" onclick="clickCard(11, 377)"><img src="./game/mastermind/image/0.jpg" alt="" id="card11"></td>
-                <td onmouseover="hoverCard(10)" onmouseout="unhoverCard(12)" onclick="clickCard(12, 730)"><img src="./game/mastermind/image/0.jpg" alt="" id="card12"></td>
-                <td onmouseover="hoverCard(11)" onmouseout="unhoverCard(13)" onclick="clickCard(13, 6)"><img src="./game/mastermind/image/0.jpg" alt="" id="card13"></td>
-                <td onmouseover="hoverCard(12)" onmouseout="unhoverCard(14)" onclick="clickCard(14, 8)"><img src="./game/mastermind/image/0.jpg" alt="" id="card14"></td>
-                </tr>
-                <tr>
-                    <td onmouseover="hoverCard(13)" onmouseout="unhoverCard(16)" onclick="clickCard(16, 210)"><img src="./game/mastermind/image/0.jpg" alt="" id="card16"></td>
-                    <td onmouseover="hoverCard(14)" onmouseout="unhoverCard(17)" onclick="clickCard(17, 377)"><img src="./game/mastermind/image/0.jpg" alt="" id="card17"></td>
-                    <td onmouseover="hoverCard(15)" onmouseout="unhoverCard(18)" onclick="clickCard(18, 747)"><img src="./game/mastermind/image/0.jpg" alt="" id="card18"></td>
-                    <td onmouseover="hoverCard(16)" onmouseout="unhoverCard(19)" onclick="clickCard(19, 809)"><img src="./game/mastermind/image/0.jpg" alt="" id="card19"></td>
-
-  </body>
 </html>
