@@ -10,7 +10,7 @@
 
 
 
-  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./dist/css/bootstrap.min.css">
 
 
   <!-- Polyfill(s) for older browsers -->
@@ -29,12 +29,14 @@
 
   <link rel="stylesheet" href="./app/shared.css" type="text/css" media="screen, projection, print" />
   <script type="text/javascript" src="./app/dynamic.js"></script>
-  <meta name="viewport" id="vp" content="user-scalable=yes,width=device-width" /> 
+  <meta name="viewport" id="vp" content="user-scalable=yes,width=device-width" />
   <script type="text/javascript" src="./app/default.js"></script>
   <link rel="stylesheet" href="./app/default.css" type="text/css" media="screen, projection, print" />
 </head>
 
 <body onload="init_cards('Time', 'Moves: ')">
+
+  <div class="container">
 
   <div class="all">
 
@@ -96,7 +98,8 @@
         <p class="instructions">Click on cards to uncover pairs.</p>
         <div style="position: relative; left: 440px; top: -110px; width: 240px"></div>
       </div>
-      <div class="score">&quot;IQ&quot; Score: 0</div>
+    
+    </div>
 </body>
 
 </html>
