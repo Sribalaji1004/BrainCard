@@ -4,9 +4,9 @@ body {
     font-family: arial, helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    background-repeat: repeat-y;
-    background-image: url(/image/backshade.png?v=1_06);
-    background-position: 50% 0;
+    background-image: url(http://eyeforpharmadrupalfs.s3.amazonaws.com/robot_3.jpg);
+    background-position: 50% ;
+
 }
 
 .all {
@@ -37,17 +37,19 @@ body {
 }
 
 h1 {
-    font-size: 23px;
+    font-style: italic;
+    font-size: 50px;
     margin: 0;
     padding: 0;
     width: 700px;
-    border-bottom: 1px solid #888;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     padding-bottom: 2px;
+    color:#009999;
+    text-shadow: 3px 1px darkblue;
 }
 
 a {
-    color: rgb(27,83,175);
+    color:red ;
 }
 
 .score {

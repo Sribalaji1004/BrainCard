@@ -23,20 +23,20 @@
   <script src="systemjs.config.js"></script>
   <script>
       System.import('app').catch(function(err){ console.error(err); });
-    </script>
+  </script>
 
 <!-- For Table -->
 
   <link rel="stylesheet" href="./app/shared.css" type="text/css" media="screen, projection, print" />
-  <script type="text/javascript" src="./app/dynamic.js"></script>
+  <!--  <script type="text/javascript" src="/app/dynamic.js"></script> -->
   <meta name="viewport" id="vp" content="user-scalable=yes,width=device-width" />
   <script type="text/javascript" src="./app/default.js"></script>
   <link rel="stylesheet" href="./app/default.css" type="text/css" media="screen, projection, print" />
-</head>
+  </head>
 
-<body onload="init_cards('Time', 'Moves: ')">
+   <body onload="init_cards('Time', 'Moves: ')">
 
-  <div class="container">
+   <div class="container">
 
   <div class="all">
 
@@ -44,8 +44,8 @@
 
     <div class="page">
 
-      <h1>Braincards</h1>
-
+      <h1>BrainCard !</h1>
+      
       <div class="content">
         <table oncontextmenu="return false">
           <tr>
@@ -92,7 +92,8 @@
         <form name="mainForm" action="./" method="post">
           <div><input type="hidden" name="wins" id="wins" value="0" /><input type="hidden" name="movesValue" id="movesValue" value="0"
             /><input type="hidden" name="mode" value="didAnswer" /><input type="hidden" name="score" value="0" />
-            <div id="continueDelay">&nbsp;</div> <input type="submit" value="Continue" id="continueButton" class="continue" /></div>
+           <!-- <div id="continueDelay">&nbsp;</div>
+           <input type="submit" value="Continue" id="continueButton" class="continue" /></div> -->
         </form>
         <p id="moves">Moves: 0</p>
         <p class="instructions">Click on cards to uncover pairs.</p>
