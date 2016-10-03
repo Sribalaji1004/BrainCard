@@ -15,9 +15,8 @@ function init_cards(sTime, sMoves)
     for (i = 0; i <= 100; i++)
     {
         g_locked[i] = 0;
-    }
-    setTimeLimit(300);
-    decreaseCounter(sTime);
+    
+}
 }
 
 function hoverCard(i)
